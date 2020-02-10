@@ -16,7 +16,11 @@ export class SingleSetComponent {
     if (!this.singleSet.has(this.element)) {
       this.singleSet.add(this.element);
     }
-    this.response = [...this.singleSet].sort().join(", ");
+    this.response = [...this.singleSet]
+      .sort((a, b) => {
+        return a - b;
+      })
+      .join(", ");
     this.element = null;
   }
 }
