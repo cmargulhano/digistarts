@@ -1,0 +1,10 @@
+<div class="form">
+  <h3>Problema do conjunto e seus elementos únicos</h3>
+  <mat-form-field class="full-width">
+    <mat-label>Entre com um número</mat-label>
+    <input matInput [(ngModel)]="element">
+  </mat-form-field>
+  <button mat-raised-button (click)="add()">Adcionar</button>
+  <p>Resultado</p>
+  <textarea class="area" matInput value="{{response}}" readonly></textarea>
+</div>

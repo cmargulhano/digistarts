@@ -1,0 +1,14 @@
+<div class="form">
+  <h3>Problema da operação entre números binários</h3>
+  <mat-form-field class="full-width">
+    <mat-label>Entre com o primeiro número</mat-label>
+    <input matInput [(ngModel)]="n1">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Entre com o segundo número</mat-label>
+    <input matInput [(ngModel)]="n2">
+  </mat-form-field>
+  <button mat-raised-button (click)="add()">Adcionar</button>
+  <p>Resultado</p>
+  <textarea class="area" matInput value="{{response}}" readonly></textarea>
+</div>
