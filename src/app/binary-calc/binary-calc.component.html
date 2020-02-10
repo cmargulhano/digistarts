@@ -8,7 +8,14 @@
     <mat-label>Entre com o segundo número</mat-label>
     <input matInput [(ngModel)]="n2">
   </mat-form-field>
-  <button mat-raised-button (click)="add()">Adcionar</button>
+  <mat-radio-group [(ngModel)]="operation">
+    <mat-radio-button value="ADD">Soma</mat-radio-button>
+    <mat-radio-button value="SUB">Subtração</mat-radio-button>
+    <mat-radio-button value="MUL">Multiplicação</mat-radio-button>
+    <mat-radio-button value="DIV">Divisão</mat-radio-button>
+    <mat-radio-button value="RES">Resto</mat-radio-button>
+  </mat-radio-group>
+  <button mat-raised-button (click)="calc()">Calcular</button>
   <p>Resultado</p>
   <textarea class="area" matInput value="{{response}}" readonly></textarea>
 </div>

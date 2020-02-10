@@ -4,7 +4,11 @@ export namespace Utils {
     return str.padStart(withPaddingLength, "0");
   }
 
-  export function toString(str: string): number {
+  export function toNumber(str: string): number {
     return parseInt(str, 2);
+  }
+
+  export function isBinary(str: string) {
+    return /^[01]+$/.test(str);
   }
 }
